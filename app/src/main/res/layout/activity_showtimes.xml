@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_dark"
+    tools:context=".ShowtimesActivity">
+
+    <!-- Botón de regresar -->
+    <ImageView
+        android:id="@+id/btnBackShow"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:background="#333333"
+        android:padding="8dp"
+        android:src="@android:drawable/ic_menu_close_clear_cancel"
+        app:tint="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Título "Horarios" -->
+    <TextView
+        android:id="@+id/tvTitleShow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Horarios"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/btnBackShow"
+        app:layout_constraintStart_toEndOf="@+id/btnBackShow"
+        app:layout_constraintTop_toTopOf="@+id/btnBackShow" />
+
+    <!-- Mini imagen de la película -->
+    <ImageView
+        android:id="@+id/imgMini"
+        android:layout_width="60dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginStart="16dp"
+        android:scaleType="centerCrop"
+        android:background="#333"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnBackShow" />
+
+    <!-- Nombre de la película -->
+    <TextView
+        android:id="@+id/tvMovieName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="Dune: Parte Dos"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imgMini"
+        app:layout_constraintTop_toTopOf="@+id/imgMini" />
+
+    <!-- Subtítulo -->
+    <TextView
+        android:id="@+id/tvSelect"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Selecciona tu función preferida"
+        android:textColor="@color/text_gray"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/tvMovieName"
+        app:layout_constraintTop_toBottomOf="@+id/tvMovieName" />
+
+    <!-- Fila de fechas -->
+    <LinearLayout
+        android:id="@+id/layoutDates"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:orientation="horizontal"
+        android:paddingStart="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/imgMini">
+
+        <!-- Fecha Hoy (Seleccionada en rojo) -->
+        <LinearLayout
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_rounded_image"
+            android:backgroundTint="@color/accent_red"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingVertical="8dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hoy"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="24"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- Fecha Mañana -->
+        <LinearLayout
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:background="@drawable/bg_rounded_image"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingVertical="8dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mañana"
+                android:textColor="@color/text_gray"
+                android:textSize="12sp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="25"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- Fecha Sábado -->
+        <LinearLayout
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:background="@drawable/bg_rounded_image"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingVertical="8dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sáb"
+                android:textColor="@color/text_gray"
+                android:textSize="12sp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="26"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Lista de funciones (RecyclerView) -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvShowtimes"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/layoutDates"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:listitem="@layout/item_showtime" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

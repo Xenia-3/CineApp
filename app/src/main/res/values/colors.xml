@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- Colores de tu app de Cine -->
+    <color name="bg_dark">#121212</color>       <!-- Fondo general de la app -->
+    <color name="card_dark">#1E1E1E</color>     <!-- Fondo de las tarjetas de películas -->
+    <color name="accent_red">#E50914</color>    <!-- El rojo de los botones y selecciones -->
+    <color name="text_gray">#B0B0B0</color>     <!-- Textos secundarios -->
+</resources>
