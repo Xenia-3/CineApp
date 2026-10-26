@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <!-- Permiso para cargar imágenes de internet -->
+
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
@@ -14,9 +14,9 @@
         android:theme="@style/Theme.CineApp"
         tools:targetApi="31">
 
-        <!-- 👇 ESTA ES LA PRIMERA PANTALLA (LOGIN) -->
+
         <activity
-            android:name=".LoginActivity"
+            android:name=".ActividadInicioSesion"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -24,18 +24,15 @@
             </intent-filter>
         </activity>
 
-        <!-- Pantalla principal -->
+
         <activity
-            android:name=".MainActivity"
+            android:name=".ActividadPrincipal"
             android:exported="true" />
 
-        <!-- Resto de actividades -->
-        <activity android:name=".DetailActivity" />
-        <activity android:name=".ShowtimesActivity" />
-        <activity android:name=".SearchActivity" />
-        <activity android:name=".TicketsActivity" />
-        <activity android:name=".FavoritesActivity" />
-        <activity android:name=".ProfileActivity" />
+        <activity android:name=".ActividadRegistro" android:exported="false" />
+        <activity android:name=".ActividadSeleccionCine" android:exported="false" />
+        <activity android:name=".ActividadDetalleBoleto" android:exported="false"
+            android:theme="@style/Theme.CineApp.Boleto" />
     </application>
 
 </manifest>

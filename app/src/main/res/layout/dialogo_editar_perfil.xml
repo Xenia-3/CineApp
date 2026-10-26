@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:background="@drawable/fondo_dialogo_perfil" android:fillViewport="true" android:scrollbars="none">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:padding="24dp">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:gravity="center_vertical" android:orientation="horizontal">
+            <ImageView android:layout_width="48dp" android:layout_height="48dp" android:padding="12dp"
+                android:background="@drawable/fondo_icono_editar_perfil" android:src="@drawable/icono_perfil"
+                android:importantForAccessibility="no" app:tint="@color/accent_red" />
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:layout_marginStart="14dp" android:orientation="vertical">
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:text="@string/editar_perfil" android:textColor="@color/white"
+                    android:textSize="21sp" android:textStyle="bold" />
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp" android:text="@string/editar_perfil_descripcion"
+                    android:textColor="@color/text_gray" android:textSize="12sp" />
+            </LinearLayout>
+        </LinearLayout>
+        <View android:layout_width="match_parent" android:layout_height="1dp"
+            android:layout_marginVertical="22dp" android:background="@color/perfil_borde" />
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:labelFor="@id/etProfileName" android:text="@string/nombre_perfil"
+            android:textColor="@color/white" android:textSize="13sp" android:textStyle="bold" />
+        <EditText android:id="@+id/etProfileName" android:layout_width="match_parent" android:layout_height="56dp"
+            android:layout_marginTop="8dp" android:paddingHorizontal="16dp" android:background="@drawable/fondo_campo_perfil"
+            android:hint="@string/nombre_perfil_hint" android:inputType="textPersonName|textCapWords"
+            android:imeOptions="actionNext" android:maxLength="80" android:singleLine="true"
+            android:textColor="@color/white" android:textColorHint="@color/text_gray" android:textSize="16sp" />
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="20dp" android:labelFor="@id/etProfileAge" android:text="@string/edad_perfil_campo"
+            android:textColor="@color/white" android:textSize="13sp" android:textStyle="bold" />
+        <EditText android:id="@+id/etProfileAge" android:layout_width="match_parent" android:layout_height="56dp"
+            android:layout_marginTop="8dp" android:paddingHorizontal="16dp" android:background="@drawable/fondo_campo_perfil"
+            android:hint="@string/edad_perfil_hint" android:inputType="number" android:imeOptions="actionDone"
+            android:maxLength="3" android:singleLine="true" android:textColor="@color/white"
+            android:textColorHint="@color/text_gray" android:textSize="16sp" />
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="28dp" android:gravity="center_vertical" android:orientation="horizontal">
+            <com.google.android.material.button.MaterialButton android:id="@+id/btnCancelProfile"
+                android:layout_width="0dp" android:layout_height="52dp" android:layout_weight="1"
+                android:layout_marginEnd="12dp" android:insetTop="0dp" android:insetBottom="0dp"
+                android:text="@string/cancelar_perfil" android:textAllCaps="false" android:textColor="@color/white"
+                android:textSize="14sp" app:backgroundTint="@color/card_dark" app:cornerRadius="12dp"
+                app:strokeColor="@color/perfil_borde" app:strokeWidth="1dp" />
+            <com.google.android.material.button.MaterialButton android:id="@+id/btnSaveProfile"
+                android:layout_width="0dp" android:layout_height="52dp" android:layout_weight="1"
+                android:insetTop="0dp" android:insetBottom="0dp" android:text="@string/guardar_perfil"
+                android:textAllCaps="false" android:textColor="@color/white" android:textSize="14sp"
+                android:textStyle="bold" app:backgroundTint="@color/accent_red" app:cornerRadius="12dp" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

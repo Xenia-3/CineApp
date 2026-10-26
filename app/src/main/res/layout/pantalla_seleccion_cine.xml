@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@color/bg_dark" android:fillViewport="true">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:padding="24dp">
+        <ImageView android:layout_width="100dp" android:layout_height="100dp"
+            android:layout_gravity="center" android:layout_marginTop="40dp"
+            android:src="@drawable/logo" android:contentDescription="Logo de Multicinema" />
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_gravity="center" android:layout_marginTop="12dp"
+            android:text="MULTICINEMA" android:textColor="@color/white"
+            android:textSize="24sp" android:textStyle="bold" />
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_gravity="center" android:text="TU PELÍCULA, TU MOMENTO"
+            android:textColor="@color/accent_red" android:textSize="12sp" />
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="40dp" android:text="Selecciona tu complejo"
+            android:textColor="@color/white" android:textSize="26sp" android:textStyle="bold" />
+        <Button android:id="@+id/btnApopa" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:minHeight="64dp" android:layout_marginTop="24dp"
+            android:backgroundTint="@color/accent_red" android:text="Multicinema Plaza Mundo Apopa"
+            android:textColor="@color/white" android:textSize="16sp" />
+        <Button android:id="@+id/btnSoyapango" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:minHeight="64dp" android:layout_marginTop="24dp"
+            android:backgroundTint="@color/accent_red" android:text="Multicinema Plaza Mundo Soyapango"
+            android:textColor="@color/white" android:textSize="16sp" />
+    </LinearLayout>
+</ScrollView>
+

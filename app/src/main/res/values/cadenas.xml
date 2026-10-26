@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">CineApp</string>
+    <string name="mi_cuenta">Mi cuenta</string>
+    <string name="editar_perfil">Editar perfil</string>
+    <string name="editar_perfil_descripcion">Actualiza tus datos personales.</string>
+    <string name="nombre_perfil_hint">Tu nombre</string>
+    <string name="edad_perfil_hint">Tu edad</string>
+    <string name="nombre_perfil">Nombre</string>
+    <string name="edad_perfil_campo">Edad (años)</string>
+    <string name="edad_perfil">%1$d años</string>
+    <string name="edad_sin_registrar">Edad sin registrar</string>
+    <string name="cancelar_perfil">Cancelar</string>
+    <string name="guardar_perfil">Guardar</string>
+    <string name="perfil_actualizado">Perfil actualizado</string>
+    <string name="nombre_perfil_requerido">Ingresa tu nombre</string>
+    <string name="edad_perfil_invalida">Ingresa una edad entre 1 y 120 años</string>
+    <string name="error_consultar_perfil">No se pudo cargar tu perfil. Intenta nuevamente.</string>
+    <string name="error_guardar_perfil">No se pudieron guardar los cambios de tu perfil. Intenta nuevamente.</string>
+    <string name="error_consultar_favoritos">No se pudieron cargar tus favoritos. Intenta nuevamente.</string>
+    <string name="error_cambios_favoritos">No se pudieron guardar los cambios. Intenta nuevamente.</string>
+    <string name="error_consultar_asientos">No se pudieron consultar los asientos ocupados. Reintenta la consulta antes de continuar.</string>
+    <string name="asientos_sin_verificar">Disponibilidad sin verificar</string>
+    <string name="asientos_leyenda">Verde: libre · Rojo: ocupado · Azul: tu selección</string>
+    <string name="asientos_ocupados_info">Los asientos rojos ya están comprados y no se pueden seleccionar.</string>
+    <string name="continuar_asientos">Continuar</string>
+    <string name="reintentar_consulta">Reintentar consulta</string>
+    <string name="error_guardar_compra">No se pudo completar la compra. Intenta nuevamente.</string>
+    <string name="cargando_boletos">Consultando tus tickets…</string>
+    <string name="error_consultar_boletos">No se pudieron consultar tus tickets. Intenta nuevamente.</string>
+    <string name="error_consultar_boleto">No se pudo consultar el boleto por un error de base de datos. Intenta nuevamente.</string>
+</resources>

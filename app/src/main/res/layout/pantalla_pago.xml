@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical" android:background="@color/black">
+    <FrameLayout android:layout_width="match_parent" android:layout_height="56dp"
+        android:layout_marginHorizontal="12dp">
+        <TextView android:layout_width="match_parent" android:layout_height="match_parent"
+            android:text="Pago" android:gravity="center" android:textStyle="bold"
+            android:textSize="20sp" android:textColor="@color/white" />
+        <ImageView android:id="@+id/btnBackPayment" android:layout_width="48dp"
+            android:layout_height="match_parent" android:padding="12dp"
+            android:src="@drawable/icono_regresar" android:contentDescription="Volver"
+            android:background="?attr/selectableItemBackgroundBorderless" />
+    </FrameLayout>
+    <ScrollView android:layout_width="match_parent" android:layout_height="0dp"
+        android:layout_weight="1" android:fillViewport="true">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:padding="16dp" android:orientation="vertical">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:padding="16dp" android:orientation="vertical" android:background="@drawable/fondo_tarjeta_horarios">
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:text="Resumen de compra" android:textColor="@color/white"
+                    android:textSize="16sp" android:textStyle="bold" />
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp" android:orientation="horizontal">
+                    <ImageView android:id="@+id/imgPaymentPoster" android:layout_width="64dp"
+                        android:layout_height="96dp" android:scaleType="centerCrop"
+                        android:contentDescription="Póster de la película" />
+                    <LinearLayout android:layout_width="0dp" android:layout_weight="1"
+                        android:layout_height="wrap_content" android:layout_marginStart="12dp" android:orientation="vertical">
+                        <TextView android:id="@+id/tvPaymentTitle" android:layout_width="match_parent"
+                            android:layout_height="wrap_content" android:textColor="@color/white"
+                            android:textStyle="bold" android:textSize="17sp" />
+                        <TextView android:id="@+id/tvPaymentCinema" android:layout_width="match_parent"
+                            android:layout_height="wrap_content" android:layout_marginTop="6dp"
+                            android:textColor="@color/text_gray" android:textSize="12sp" />
+                        <TextView android:id="@+id/tvPaymentFunction" android:layout_width="match_parent"
+                            android:layout_height="wrap_content" android:layout_marginTop="5dp"
+                            android:textColor="@color/text_gray" android:textSize="12sp" />
+                    </LinearLayout>
+                </LinearLayout>
+                <TextView android:id="@+id/tvPaymentSeats" android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:layout_marginTop="14dp"
+                    android:textColor="@color/white" android:textSize="13sp" />
+                <TextView android:id="@+id/tvPaymentCount" android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:layout_marginTop="5dp"
+                    android:textColor="@color/text_gray" android:textSize="12sp" />
+                <View android:layout_width="match_parent" android:layout_height="1dp"
+                    android:layout_marginVertical="14dp" android:background="#3A3A3A" />
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <TextView android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content"
+                        android:text="Subtotal de asientos" android:textColor="@color/text_gray" android:textSize="13sp" />
+                    <TextView android:id="@+id/tvPaymentSubtotal" android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:textColor="@color/white" android:textSize="13sp" />
+                </LinearLayout>
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp">
+                    <TextView android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content"
+                        android:text="Cargo por servicio" android:textColor="@color/text_gray" android:textSize="13sp" />
+                    <TextView android:id="@+id/tvPaymentFee" android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:textColor="@color/white" android:textSize="13sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginTop="24dp" android:text="Métodos de pago"
+                android:textColor="@color/white" android:textSize="17sp" android:textStyle="bold" />
+            <com.google.android.material.button.MaterialButton android:id="@+id/btnMethodCard"
+                android:layout_width="match_parent" android:layout_height="56dp" android:layout_marginTop="12dp"
+                android:text="Tarjeta de crédito / débito" android:textAllCaps="false"
+                android:textColor="@color/white" app:backgroundTint="@color/card_dark"
+                app:strokeWidth="1dp" app:strokeColor="#3A3A3A" app:cornerRadius="10dp" />
+
+            <LinearLayout android:id="@+id/cardForm" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:orientation="vertical"
+                android:padding="14dp" android:layout_marginTop="8dp" android:visibility="gone"
+                android:background="@drawable/fondo_tarjeta_horarios" android:importantForAutofill="noExcludeDescendants">
+                <EditText android:id="@+id/etCardHolder" android:layout_width="match_parent"
+                    android:layout_height="52dp" android:hint="Nombre del titular" android:inputType="textPersonName"
+                    android:singleLine="true" android:paddingHorizontal="12dp" android:saveEnabled="false"
+                    android:background="@drawable/fondo_campo_pago" android:textColor="@color/white"
+                    android:textColorHint="@color/text_gray" android:textSize="14sp" />
+                <EditText android:id="@+id/etCardNumber" android:layout_width="match_parent"
+                    android:layout_height="52dp" android:layout_marginTop="10dp" android:hint="Número de tarjeta"
+                    android:inputType="number" android:singleLine="true" android:paddingHorizontal="12dp"
+                    android:saveEnabled="false" android:background="@drawable/fondo_campo_pago"
+                    android:textColor="@color/white" android:textColorHint="@color/text_gray" android:textSize="14sp" />
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp" android:orientation="horizontal">
+                    <EditText android:id="@+id/etCardExpiry" android:layout_width="0dp" android:layout_weight="1"
+                        android:layout_height="52dp" android:layout_marginEnd="10dp" android:hint="MM/AAAA"
+                        android:inputType="number" android:digits="0123456789/"
+                        android:singleLine="true" android:paddingHorizontal="12dp" android:saveEnabled="false"
+                        android:background="@drawable/fondo_campo_pago" android:textColor="@color/white"
+                        android:textColorHint="@color/text_gray" android:textSize="14sp" />
+                    <EditText android:id="@+id/etCardCvv" android:layout_width="0dp" android:layout_weight="1"
+                        android:layout_height="52dp" android:hint="CVV" android:inputType="numberPassword"
+                        android:singleLine="true" android:paddingHorizontal="12dp" android:saveEnabled="false"
+                        android:background="@drawable/fondo_campo_pago" android:textColor="@color/white"
+                        android:textColorHint="@color/text_gray" android:textSize="14sp" />
+                </LinearLayout>
+            </LinearLayout>
+            <com.google.android.material.button.MaterialButton android:id="@+id/btnMethodPaypal"
+                android:layout_width="match_parent" android:layout_height="56dp" android:layout_marginTop="10dp"
+                android:text="PayPal · Donación" android:textAllCaps="false" android:textColor="@color/white"
+                app:backgroundTint="@color/card_dark" app:strokeWidth="1dp" app:strokeColor="#3A3A3A"
+                app:cornerRadius="10dp" app:icon="@drawable/icono_paypal" app:iconTint="@null"
+                app:iconSize="28dp" app:iconGravity="textStart" />
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginTop="6dp" android:text="Donación independiente de la compra de boletos."
+                android:textColor="@color/text_gray" android:textSize="12sp" />
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:padding="16dp" android:orientation="vertical" android:background="@color/card_dark">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center_vertical">
+            <TextView android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content"
+                android:text="Total a pagar" android:textColor="@color/white" android:textSize="15sp" />
+            <TextView android:id="@+id/tvPaymentTotal" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:textColor="@color/accent_red" android:textSize="24sp" android:textStyle="bold" />
+        </LinearLayout>
+        <Button android:id="@+id/btnPayNow" android:layout_width="match_parent"
+            android:layout_height="56dp" android:layout_marginTop="12dp" android:text="Pagar ahora"
+            android:textAllCaps="false" android:textColor="@color/white" android:enabled="false"
+            android:backgroundTint="@color/accent_red" />
+    </LinearLayout>
+</LinearLayout>
