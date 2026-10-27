@@ -14,7 +14,7 @@ La aplicación está inspirada en Multicinema y permite consultar películas, se
 
 ## Documentación del proyecto
 
-- **Manual de usuario:** [Ver manual de usuario](https://drive.google.com/file/d/1yqYiQsZsCZOnvqgHHKflOPx61FrMoLlR/view?usp=sharing)
+- **Manual de usuario:** [Ver manual de usuario](https://drive.google.com/file/d/16rEqa9IzA_teufCFCWTf24VT08KC6RuR/view?usp=sharing)
 - **Manual técnico:** [Ver manual técnico]()
 - **Diseños Mockups:** [Ver diseños]()
 
